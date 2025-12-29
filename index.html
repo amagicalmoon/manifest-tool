@@ -2,28 +2,35 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Manifestation Insight</title>
+    <title>Receive Your Guidance</title>
   </head>
   <body>
 
-    <h1>Why is my manifestation blocked?</h1>
+    <h1>Receive Your Guidance</h1>
 
     <form id="manifest-form">
       <p>
         <label>
-          What are you trying to manifest?<br />
-          <input type="text" id="goal" required />
+          What do you want the Universe to bring into your life right now?<br />
+          <input type="text" id="desire" required />
         </label>
       </p>
 
       <p>
         <label>
-          What feels stuck or frustrating?<br />
+          How do you feel when you imagine this already being yours?<br />
           <textarea id="feeling" required></textarea>
         </label>
       </p>
 
-      <button type="submit">Reveal the block</button>
+      <p>
+        <label>
+          What thought do you notice that doesn’t fully align with that feeling yet?<br />
+          <textarea id="misalignment" required></textarea>
+        </label>
+      </p>
+
+      <button type="submit">👉 ✨ Receive Your Guidance</button>
     </form>
 
     <pre id="output"></pre>
@@ -35,11 +42,14 @@
       form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const goal = document.getElementById('goal').value;
+        const desire = document.getElementById('desire').value;
         const feeling = document.getElementById('feeling').value;
+        const misalignment = document.getElementById('misalignment').value;
 
         output.textContent =
-          "Goal:\n" + goal + "\n\nFeeling:\n" + feeling;
+          "What you want:\n" + desire +
+          "\n\nHow it feels:\n" + feeling +
+          "\n\nMisaligned thought:\n" + misalignment;
       });
     </script>
 
